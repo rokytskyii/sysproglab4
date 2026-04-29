@@ -7,7 +7,7 @@
 typedef struct
 {
     int inode_id;
-    uint32_t offset; // Зміщення для наступного читання/запису [cite: 156, 278]
+    uint32_t offset;
     bool is_open;
 } fd_entry_t;
 

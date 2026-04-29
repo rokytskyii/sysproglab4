@@ -98,7 +98,6 @@ void k_close(int fd)
     }
 }
 
-// ВИПРАВЛЕНО: тип повернення int замість void
 int k_write(int fd, int size, const char *data)
 {
     if (fd < 0 || fd >= MAX_FD || !fd_table[fd].is_open)
@@ -120,7 +119,6 @@ int k_write(int fd, int size, const char *data)
     return i;
 }
 
-// ВИПРАВЛЕНО: тип повернення int замість void
 int k_read(int fd, int size)
 {
     if (fd < 0 || fd >= MAX_FD || !fd_table[fd].is_open)

@@ -4,8 +4,8 @@
 
 inode_t inodes[MAX_FILES];
 dir_entry_t root_dir[MAX_FILES];
-uint8_t disk[MAX_BLOCKS][BLOCK_SIZE]; // Носій у пам'яті [cite: 142]
-uint8_t bitmap[MAX_BLOCKS];           // Бітова карта блоків [cite: 115]
+uint8_t disk[MAX_BLOCKS][BLOCK_SIZE];
+uint8_t bitmap[MAX_BLOCKS];
 
 void fs_init()
 {
@@ -42,7 +42,6 @@ void fs_free_block(int idx)
         bitmap[idx] = 0;
 }
 
-// Повертає номер фізичного блоку для логічного зміщення у файлі
 int fs_get_phys_block(int inode_id, int log_blk, int allocate)
 {
     inode_t *node = &inodes[inode_id];

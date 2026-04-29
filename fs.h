@@ -11,17 +11,15 @@ typedef enum
     TYPE_DIR = 2
 } file_type_t;
 
-// Дескриптор файлу (Inode) [cite: 120, 121]
 typedef struct
 {
     file_type_t type;
-    int nlink;                 // Кількість жорстких посилань [cite: 120]
-    uint32_t size;             // Розмір у байтах [cite: 120]
-    int direct[DIRECT_BLOCKS]; // Прямі посилання на блоки
-    int indirect;              // Опосередковане посилання на блок з адресами
+    int nlink;
+    uint32_t size;
+    int direct[DIRECT_BLOCKS];
+    int indirect;
 } inode_t;
 
-// Запис у директорії (Directory Entry / Hard link) [cite: 127, 128]
 typedef struct
 {
     char name[MAX_NAME_LEN];
