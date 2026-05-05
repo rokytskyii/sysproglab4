@@ -7,5 +7,6 @@
 #define MAX_NAME_LEN 32
 #define DIRECT_BLOCKS 5
 #define MAX_FD 8
+#define MAX_SYMLINK_HOPS 8
 
 #endif

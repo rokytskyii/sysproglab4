@@ -3,7 +3,7 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "Build FS Lab 4",
+            "label": "Build FS Lab 5",
             "command": "gcc",
             "args": [
                 "-fdiagnostics-color=always",
@@ -12,7 +12,7 @@
                 "fs.c",
                 "kernel.c",
                 "-o",
-                "${fileDirname}\\fs_lab4.exe",
+                "${fileDirname}\\fs_lab5.exe",
                 "-std=c11",
                 "-Wall"
             ],

@@ -1,9 +1,7 @@
 #include "fs.h"
 #include <string.h>
-#include <stdio.h>
 
 inode_t inodes[MAX_FILES];
-dir_entry_t root_dir[MAX_FILES];
 uint8_t disk[MAX_BLOCKS][BLOCK_SIZE];
 uint8_t bitmap[MAX_BLOCKS];
 
@@ -18,7 +16,6 @@ void fs_init()
         inodes[i].indirect = -1;
         for (int j = 0; j < DIRECT_BLOCKS; j++)
             inodes[i].direct[j] = -1;
-        root_dir[i].inode_id = -1;
     }
 }
 

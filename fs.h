@@ -8,7 +8,8 @@ typedef enum
 {
     TYPE_EMPTY = 0,
     TYPE_REG = 1,
-    TYPE_DIR = 2
+    TYPE_DIR = 2,
+    TYPE_SYM = 3
 } file_type_t;
 
 typedef struct

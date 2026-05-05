@@ -5,7 +5,7 @@
             "name": "Debug FS Lab",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\fs_lab4.exe",
+            "program": "${fileDirname}\\fs_lab5.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -20,7 +20,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Build FS Lab 4"
+            "preLaunchTask": "Build FS Lab 5"
         }
     ]
 }
