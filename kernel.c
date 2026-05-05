@@ -129,10 +129,15 @@ int resolve_path_base(const char *path, int base_dir, int *parent_id, char *name
 
             char new_path[512] = {0};
             strcpy(new_path, sym_path);
-            if (!is_last && saveptr && *saveptr != '\0')
+            if (!is_last)
             {
                 strcat(new_path, "/");
-                strcat(new_path, saveptr);
+                strcat(new_path, next_token);
+                if (saveptr && *saveptr != '\0')
+                {
+                    strcat(new_path, "/");
+                    strcat(new_path, saveptr);
+                }
             }
             int sym_base = (sym_path[0] == '/') ? 0 : curr_dir;
             return resolve_path_base(new_path, sym_base, parent_id, name_out, follow_last, hops + 1);
